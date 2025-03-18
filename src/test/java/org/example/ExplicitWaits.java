@@ -51,6 +51,8 @@ public class ExplicitWaits {
             System.out.println("X Elemento no encontrado "+ e.getMessage());
         } finally {
             driver.quit();
+            driver.switchTo().newWindow(WindowType.TAB);
+            driver.get("https://www.google.com");
         }
     }
 }
